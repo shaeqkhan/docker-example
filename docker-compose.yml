@@ -1,0 +1,15 @@
+version: '2.2'
+services:
+  hello:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: hello
+    ports:
+      - 8080
+    networks:
+      - mynetwork
+    scale: 3
+ 
+networks:
+  mynetwork:
